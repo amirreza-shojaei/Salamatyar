@@ -1,0 +1,14 @@
+[
+  {
+    "img": "/media/img/doctor.webp",
+    "title": "مشاوره پزشکی",
+    "pragraph": "مشاوره با بهترین پزشکان متخصص",
+    "navigate": "/bookingPage"
+  },
+  {
+    "img": "/media/img/online-doctor.webp",
+    "title": "نوبت دهی انلاین ",
+    "pragraph": "رزرو سریع و اسان نوبت",
+    "navigate": "/bookingPage"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "img": "/media/logo/EarS.webp",
+    "title": "دکتر گوش و حق و بینی"
+  },
+  {
+    "img": "/media/logo/hearS.webp",
+    "title": "دکتر پوست و مو"
+  },
+  {
+    "img": "/media/logo/phyS.webp",
+    "title": "دکتر روانشناس"
+  },
+  {
+    "img": "/media/logo/womenS.webp",
+    "title": "دکتر زنان"
+  },
+  {
+      "img": "/media/logo/babyS.png",
+    "title": "دکتر اطفال"
+  },
+  {
+      "img": "/media/logo/generalD.png",
+    "title": "دکتر عمومی"
+  }
+]

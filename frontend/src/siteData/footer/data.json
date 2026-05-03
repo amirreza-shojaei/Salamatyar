@@ -1,0 +1,60 @@
+{
+  "logo": "سلامت یار",
+  "description": "سامانه هوشمند نوبت‌دهی مرکز بهداشت با هدف ارائه خدمات سریع و آسان به شما عزیزان.",
+  "socialLinks": [
+    {
+      "name": "اینستاگرام",
+      "url": "https://instagram.com",
+      "icon": "FaInstagram",
+      "ariaLabel": "اینستاگرام"
+    },
+    {
+      "name": "تلگرام",
+      "url": "https://telegram.org",
+      "icon": "FaTelegram",
+      "ariaLabel": "تلگرام"
+    },
+    {
+      "name": "لینکدین",
+      "url": "https://linkedin.com",
+      "icon": "FaLinkedin",
+      "ariaLabel": "لینکدین"
+    }
+  ],
+  "quickLinks": [
+    {
+      "name": "صفحه اصلی",
+      "path": "/",
+      "type": "internal"
+    },
+    {
+      "name": "ثبت نوبت",
+      "path": "/BookingPage",
+      "type": "internal"
+    },
+    {
+      "name": "ورود پزشکان",
+      "path": "/Login",
+      "type": "internal"
+    },
+    {
+      "name": "درباره ما",
+      "path": "#about",
+      "type": "anchor"
+    },
+    {
+      "name": "تماس با ما",
+      "path": "#contact",
+      "type": "anchor"
+    }
+  ],
+  "contactInfo": {
+    "phone": "۰۲۱-۱۲۳۴۵۶۷۸",
+    "email": "info@healthyar.ir",
+    "address": "تهران، خیابان انقلاب، نبش خیابان ۱۲، ساختمان سلامت"
+  },
+  "copyright": {
+    "text": "کلیه حقوق مادی و معنوی این سایت متعلق به مرکز بهداشت سلامت یار می‌باشد.",
+    "heartText": "ساخته شده با ❤️ و افتخار"
+  }
+}

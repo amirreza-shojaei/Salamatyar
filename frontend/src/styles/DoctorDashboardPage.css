@@ -1,0 +1,276 @@
+/* src/styles/DoctorDashboardPage.css */
+
+/* ---------- صفحه اصلی داشبورد ---------- */
+.doctor-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f9ff 0%, #eef2f7 100%);
+  direction: rtl;
+  border-radius: 20px;
+}
+
+/* ---------- هدر داشبورد ---------- */
+.dashboard-header {
+  background: linear-gradient(135deg, #0088b8 0%, #00bcd4 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-icon {
+  font-size: 1.8rem;
+}
+
+.header-title h1 {
+  color: white;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.doctor-welcome {
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 1rem;
+  border-radius: 40px;
+  font-size: 0.9rem;
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background: #ff6b6b;
+  transform: translateY(-2px);
+}
+
+/* ---------- محتوای اصلی ---------- */
+.dashboard-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ---------- بخش فیلتر تاریخ ---------- */
+.date-filter-section {
+  background: white;
+  border-radius: 24px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 136, 184, 0.1);
+}
+
+.date-filter-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #006d94;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.date-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.date-filter-buttons button {
+  background: #f1f3f5;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #495057;
+}
+
+.date-filter-buttons button:hover {
+  background: #e2e6ea;
+  transform: translateY(-1px);
+}
+
+.date-filter-buttons button.active {
+  background: linear-gradient(135deg, #0088b8, #00bcd4);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 136, 184, 0.3);
+}
+
+/* ---------- بخش لیست نوبت‌ها ---------- */
+.appointments-section {
+  background: white;
+  border-radius: 24px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 136, 184, 0.1);
+}
+
+.appointments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.appointments-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #006d94;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.appointments-count {
+  background: #e3f2f5;
+  color: #0088b8;
+  padding: 0.2rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* گرید کارت‌های نوبت */
+.appointments-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.appointment-card {
+  background: #f8fcff;
+  border-radius: 20px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #e2edf2;
+}
+
+.appointment-card:hover {
+  background: white;
+  transform: translateX(-4px);
+  box-shadow: 0 6px 14px rgba(0, 136, 184, 0.12);
+  border-color: #00bcd4;
+}
+
+.appointment-info {
+  flex: 1;
+}
+
+.patient-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e2a3e;
+  margin-bottom: 0.4rem;
+}
+
+.appointment-details {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.appointment-time,
+.appointment-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #6c757d;
+  background: #eef2f5;
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+}
+
+.appointment-arrow {
+  font-size: 1.2rem;
+  color: #00bcd4;
+  transition: transform 0.2s;
+}
+
+.appointment-card:hover .appointment-arrow {
+  transform: translateX(-4px);
+}
+
+/* حالت خالی */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+  background: #f8f9fa;
+  border-radius: 20px;
+}
+
+/* ---------- ریسپانسیو ---------- */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header-info {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .dashboard-main {
+    padding: 1rem;
+  }
+  .date-filter-buttons {
+    justify-content: center;
+  }
+  .appointment-details {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .appointment-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .appointment-arrow {
+    transform: rotate(90deg);
+  }
+  .appointment-card:hover .appointment-arrow {
+    transform: rotate(90deg) translateX(0px);
+  }
+}

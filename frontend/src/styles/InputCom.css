@@ -1,0 +1,76 @@
+/* کانتینر کل یک ورودی */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* کمی فاصله بیشتر بین لیبل و فیلد */
+  margin-bottom: 20px; /* فاصله در انتهای هر ورودی */
+}
+
+/* لیبل عمومی */
+.input-label {
+  font-size: 14px; /* کمی کوچکتر و ظریف تر */
+  font-weight: 500; /* وزن قلم کمی ضخیم تر */
+  color: #4a4a4a; /* رنگ خاکستری تیره تر */
+  letter-spacing: 0.5px; /* کمی فاصله بین حروف */
+  transition: all 0.3s ease; /* انیمیشن برای لیبل */
+}
+
+/* استایل عمومی فیلدها */
+.input-field {
+  width: 100%;
+  padding: 12px 15px; /* پدینگ بیشتر برای حس فضای داخلی بهتر */
+  font-size: 16px; /* کمی بزرگتر */
+  border: 2px solid #e0e0e0; /* حاشیه کمی ضخیم تر و رنگ ملایم تر */
+  border-radius: 10px; /* گردتر کردن لبه ها */
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* انیمیشن های روان تر */
+  color: #333; /* رنگ متن ورودی */
+}
+
+/* فوکوس زیبا */
+.input-field:focus {
+  border-color: #2563eb; /* رنگ آبی همچنان قوی */
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.25); /* سایه کمی محو تر و پخش تر */
+  outline: none; /* اطمینان از حذف اوتلاین پیش فرض */
+}
+
+/* استایل برای زمانی که لیبل روی فیلد شناور است (Placeholder behavior) */
+.input-wrapper label.floating-label {
+  position: absolute;
+  left: 15px; /* همراستا با padding فیلد */
+  top: 15px; /* همراستا با padding فیلد */
+  font-size: 16px;
+  color: #999;
+  pointer-events: none; /* اجازه کلیک روی فیلد زیرین */
+  transition: all 0.3s ease;
+}
+
+.input-wrapper .input-field:focus ~ label.floating-label,
+.input-wrapper .input-field:not(:placeholder-shown) ~ label.floating-label {
+  top: -12px; /* بالا بردن لیبل */
+  left: 12px;
+  font-size: 12px; /* کوچک کردن فونت */
+  color: #2563eb; /* تغییر رنگ لیبل */
+  background-color: white; /* اضافه کردن پس زمینه سفید برای پوشاندن خط بالا */
+  padding: 0 4px; /* کمی padding برای ظاهر بهتر */
+  font-weight: 500;
+}
+
+/* برای زمانی که placeholder هم نیست */
+.input-wrapper .input-field:not(:placeholder-shown) {
+    border-color: #a0a0a0; /* کمی تغییر رنگ حاشیه وقتی پر شده ولی فوکوس نیست */
+}
+
+/* حالت خطا (مثال) */
+.input-wrapper.error .input-label,
+.input-wrapper.error .input-field {
+  color: #dc2626; /* قرمز برای خطا */
+}
+.input-wrapper.error .input-field {
+  border-color: #dc2626;
+  box-shadow: 0 0 5px rgba(220, 38, 38, 0.3);
+}
+.input-wrapper.error .input-field:focus {
+  border-color: #b91c1c;
+  box-shadow: 0 0 8px rgba(185, 28, 28, 0.3);
+}

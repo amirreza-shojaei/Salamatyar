@@ -1,0 +1,380 @@
+/* src/styles/ReceptionPage.css */
+
+.secretary-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f9ff 0%, #eef2f7 100%);
+  border-radius: 28px;
+}
+
+.dashboard-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* بخش نوبت‌ها */
+.appointments-section {
+  background: white;
+  border-radius: 28px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.appointments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e2edf2;
+}
+
+.appointments-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #006d94;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.appointments-count {
+  background: #e0f2f7;
+  color: #0088b8;
+  padding: 0.3rem 0.8rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* گرید کارت‌ها */
+.appointments-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* کارت نوبت */
+.appointment-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+  border: 1px solid #e2edf2;
+  border-radius: 20px;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-2px);
+  border-color: #00bcd4;
+  box-shadow: 0 8px 20px rgba(0, 136, 184, 0.1);
+  background: white;
+}
+
+.appointment-info {
+  flex: 2;
+}
+
+.patient-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e2a3e;
+  margin: 0 0 0.3rem 0;
+}
+
+.patient-doctors-info {
+  font-size: 0.85rem;
+  color: #0088b8;
+  margin: 0 0 0.5rem 0;
+}
+
+.appointment-details {
+  display: flex;
+  gap: 1rem;
+}
+
+.appointment-time,
+.appointment-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+/* وضعیت نوبت */
+.appointment-status-badge {
+  flex: 0.5;
+  text-align: center;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+  padding: 0.3rem 0.8rem;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.status-approved {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* فلش راهنما */
+.appointment-arrow {
+  color: #adb5bd;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+
+.appointment-card:hover .appointment-arrow {
+  transform: translateX(-4px);
+  color: #0088b8;
+}
+
+/* حالت خالی */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 3rem;
+  color: #0088b8;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .dashboard-main {
+    padding: 1rem;
+  }
+  .appointments-section {
+    padding: 1rem;
+  }
+  .appointment-card {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  .appointment-info {
+    flex: 1 1 100%;
+  }
+  .appointment-status-badge {
+    flex: 0 0 auto;
+  }
+  .appointment-arrow {
+    display: none;
+  }
+  .appointment-details {
+    flex-wrap: wrap;
+  }
+}
+/* بخش ثبت زمان کاری دکتر */
+.schedule-section {
+  background: white;
+  border-radius: 28px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.schedule-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #006d94;
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e2edf2;
+}
+
+.schedule-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.schedule-form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.schedule-input-group {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.schedule-input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1e2a3e;
+}
+
+.schedule-input-group input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #e2edf2;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #1e2a3e;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.schedule-input-group input:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.1);
+  background: white;
+}
+
+.schedule-input-group input::placeholder {
+  color: #adb5bd;
+  font-size: 0.8rem;
+}
+
+.schedule-submit-btn {
+  align-self: flex-end;
+  padding: 0.7rem 2rem;
+  background: linear-gradient(135deg, #0088b8, #006d94);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.schedule-submit-btn:hover {
+  background: linear-gradient(135deg, #006d94, #005a7d);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 109, 148, 0.2);
+}
+
+.schedule-submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .schedule-form-row {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .schedule-input-group {
+    min-width: 100%;
+  }
+  
+  .schedule-submit-btn {
+    width: 100%;
+  }
+}
+/* استایل DatePicker */
+.persian-date-picker {
+  position: relative;
+}
+
+.persian-date-picker input {
+  cursor: pointer;
+}
+
+.date-picker-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 100;
+  background: white;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2edf2;
+  min-width: 280px;
+  margin-top: 8px;
+}
+
+.picker-header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.picker-header select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #e2edf2;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  background: #f8fafc;
+  color: #1e2a3e;
+}
+
+.picker-days-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.picker-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.picker-day-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #1e2a3e;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.picker-day-btn:hover {
+  background: #00bcd4;
+  color: white;
+}
+
+.picker-close-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px;
+  background: #f1f3f5;
+  border: none;
+  border-radius: 8px;
+  color: #6c757d;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.picker-close-btn:hover {
+  background: #e9ecef;
+}
