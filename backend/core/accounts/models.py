@@ -64,7 +64,6 @@ class User(AbstractBaseUser , PermissionsMixin):
 
     def __str__(self):
         return self.phone
-    
 @receiver(post_save , sender=User)
 def save_doctor_profile(sender , instance , created ,**kwargs):
     if created and instance.role == 'doctor'and instance.is_active:
