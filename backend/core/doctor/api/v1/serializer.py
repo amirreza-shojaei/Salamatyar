@@ -4,6 +4,7 @@ from ...models import Doctor, Specialty, Schedule
 from appointments.models import Appointment
 import jdatetime
 from django_jalali.db import models as jmodels
+from django.utils import timezone
 
 class DoctorListSerializer(serializers.ModelSerializer):
     name = serializers.CharField(source='user.first_name')
@@ -20,10 +21,14 @@ class DoctorListSerializer(serializers.ModelSerializer):
     
     def get_workingTimes(self, obj):
         working_times = []
-        
-        schedules = Schedule.objects.filter(doctor=obj.id,is_active=True).order_by('date')
 
-        appointments = Appointment.objects.filter(status__in=['pending', 'confirmed'])
+        today = timezone.localdate()
+
+        
+        schedules = Schedule.objects.filter(doctor=obj.id,date__gte=today,is_active=True).order_by('date')
+
+
+        appointments = Appointment.objects.filter(status__in=['pending', 'confirmed'],date__gte=today)
 
         for schedule in schedules:
             day_appointments = appointments.filter(date=schedule.date)
